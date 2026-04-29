@@ -1,0 +1,245 @@
+* {
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+        /* Navigation */
+    nav {
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #2563eb;
+    }
+
+    .links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .links a:hover {
+        color: brown;
+    }
+
+    .font {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+                   /* home section */
+
+    .section {
+        padding: 5rem 0;
+    }
+
+    .section:nth-child(even) {
+        background: white;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        color: #1e293b;
+    }
+
+    .underline {
+        width: 60px;
+        height: 3px;
+        background: #2563eb;
+        margin: 0.5rem auto;
+    }
+
+        /* Home Section */
+    .home-container {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        padding-top: 9rem;
+    }
+
+    .home-text {
+        flex: 1;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .home-text .highlight {
+        color: #2563eb;
+    }
+
+    .short-intro {
+        margin: 1rem 0;
+        color: #666;
+    }
+
+    .profile-img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-top: 0.5rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-outline {
+        background: transparent;
+        border: 2px solid #2563eb;
+        color: #2563eb;
+        margin-left: 0.5rem;
+    }
+    .btn:hover{
+        background: brown;
+    }
+
+/************************ About section ********************/
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-card {
+        background: lightgrey;
+        padding: 1.5rem;
+        border-radius: 10px;
+            
+    }
+
+    .about-card i {
+            
+        font-size: 2rem;
+        color: #2563eb;
+        margin-bottom: 1rem;
+    }
+
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .skill-tags span {
+        background: #e2e8f0;
+        padding: 0.2rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+        
+        /******************************* skills ***************************/
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .skill-card {
+        background: lightgrey;
+        padding: 1.8rem;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        border: 1px solid #e2e8f0;
+    }
+
+    .skill-card i {
+        font-size: 2.5rem;
+        color: #2563eb;
+        margin-bottom: 1rem;
+    }
+
+    .skill-card h3 {
+        margin-bottom: 0.5rem;
+    }
+
+        /************* Contact form  ********************/
+
+        
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 50%;
+        padding: 0.7rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 5px;
+    }
+
+    .error {
+        color: #dc2626;
+        font-size: 0.8rem;
+    }
+
+    .success {
+        color: #16a34a;
+        margin-top: 0.5rem;
+    }
+
+
