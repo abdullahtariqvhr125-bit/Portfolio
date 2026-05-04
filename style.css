@@ -143,6 +143,10 @@
 
 /************************ About section ********************/
 
+    .section-header{
+        margin-top: 50px;
+    }
+
     .about-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -151,10 +155,14 @@
     }
 
     .about-card {
+        transition: 0.5s;
         background: lightgrey;
         padding: 1.5rem;
         border-radius: 10px;
             
+    }
+    .about-card:hover{
+        transform: translateY(-5px);
     }
 
     .about-card i {
@@ -193,6 +201,9 @@
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         border: 1px solid #e2e8f0;
+    }
+    .skill-card:hover{
+        transform: translateY(-1px);
     }
 
     .skill-card i {
