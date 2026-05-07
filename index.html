@@ -13,6 +13,9 @@
 <nav>
     <div class="nav-container">
         <div class="logo">Portfolio</div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
         <ul class="links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -20,7 +23,6 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
-    <img src="menu.jpeg" class="menu-icon" onclick="menutoggle()" >
 
 </nav>
 
@@ -38,7 +40,7 @@
                 
             </div>
             <div class="home-image">
-                <img src="abdullah pick eid.jpeg" alt="Profile" class="profile-img">
+                <img src="portfolio.jpeg" alt="Profile" class="profile-img">
             </div>
         </div>
     </section>
@@ -137,18 +139,35 @@
     </section>
 </main>
 
+
+
 <script>
-    var MenuItems=document.getElementById("MenuItems");
-    MenuItems.style.maxHeight="0px";
-    function menutoggle(){
-        if(MenuItems.style.maxHeight=="0px"){
-            MenuItems.style.maxHeight="200px";
-        }
-        else{
-            MenuItems.style.maxHeight="0px";
-        }
-    }
+        // ========== MOBILE HAMBURGER MENU ==========
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
     
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        // Change icon
+        const icon = hamburger.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+       // Close mobile menu when clicking a nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
 </script>
 </body>
 </html>
