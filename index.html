@@ -13,9 +13,7 @@
 <nav>
     <div class="nav-container">
         <div class="logo">Portfolio</div>
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
+
         <ul class="links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -141,33 +139,5 @@
 
 
 
-<script>
-        // ========== MOBILE HAMBURGER MENU ==========
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        // Change icon
-        const icon = hamburger.querySelector('i');
-        if (icon.classList.contains('fa-bars')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
-
-       // Close mobile menu when clicking a nav link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            const icon = hamburger.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        });
-    });
-</script>
 </body>
 </html>
